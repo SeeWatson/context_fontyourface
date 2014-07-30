@@ -1,0 +1,6 @@
+name = Context Font Your Face
+description = "Provide context access to the @font-your-face module."
+package = Context
+core = "7.x"
+dependencies[] = fontyourface
+dependencies[] = context
