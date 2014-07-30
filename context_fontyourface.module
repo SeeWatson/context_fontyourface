@@ -6,6 +6,13 @@
  */
  
 /**
+ * Implements hook_enable().
+ */
+function context_fontyourface_enable() {
+  drupal_flush_all_caches();
+}
+
+/**
  * Implements hook_ctools_plugin_api().
  */
 function context_fontyourface_ctools_plugin_api($module, $api) {
