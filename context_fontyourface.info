@@ -1,1 +1,8 @@
-name = Context Fontyourface
+name = @font-your-face Context Reaction
+description = "Provides context integration for the @font-your-face module."
+package = @font-your-face
+core = "7.x"
+dependencies[] = fontyourface
+dependencies[] = context
+
+files[] = plugins/context_fontyourface_context_reaction_fontyourface.inc

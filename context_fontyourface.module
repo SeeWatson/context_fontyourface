@@ -1,0 +1,45 @@
+<?php
+
+/**
+ * @file
+ * Implement hooks for @font-your-face context reaction.
+ */
+
+/**
+ * Implements hook_ctools_plugin_api().
+ */
+function context_fontyourface_ctools_plugin_api($module, $api) {
+  if ($module == 'context' && $api == 'plugins') {
+    return array('version' => 3);
+  }
+}
+
+/**
+ * Implements hook_context_plugins().
+ */
+function context_fontyourface_context_plugins() {
+  $plugins = array();
+  $plugins['context_fontyourface_context_reaction_fontyourface'] = array(
+    'handler' => array(
+      'path' => drupal_get_path('module', 'context_fontyourface') .'/plugins',
+      'file' => 'context_fontyourface_context_reaction_fontyourface.inc',
+      'class' => 'context_fontyourface_context_reaction_fontyourface',
+      'parent' => 'context_reaction',
+    ),
+  );
+  return $plugins;
+}
+
+/**
+ * Implements hook_context_registry().
+ */
+function context_fontyourface_context_registry() {
+  return array(
+    'reactions' => array(
+      'fontyourface' => array(
+        'title' => t('@font-your-face'),
+        'plugin' => 'context_fontyourface_context_reaction_fontyourface',
+      ),
+    ),
+  );
+}
