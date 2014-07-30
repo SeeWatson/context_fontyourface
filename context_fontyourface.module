@@ -21,7 +21,7 @@ function context_fontyourface_context_plugins() {
   $plugins = array();
   $plugins['context_fontyourface_context_reaction_fontyourface'] = array(
     'handler' => array(
-      'path' => drupal_get_path('module', 'context_fontyourface') .'/plugins',
+      'path' => drupal_get_path('module', 'context_fontyourface') . '/plugins',
       'file' => 'context_fontyourface_context_reaction_fontyourface.inc',
       'class' => 'context_fontyourface_context_reaction_fontyourface',
       'parent' => 'context_reaction',

@@ -1,5 +1,5 @@
 name = @font-your-face Context Reaction
-description = "Provide context integration for the @font-your-face module."
+description = "Provides context integration for the @font-your-face module."
 package = @font-your-face
 core = "7.x"
 dependencies[] = fontyourface
