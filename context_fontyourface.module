@@ -1,11 +1,12 @@
 <?php
-/*****************************************
- * context 3 integration
- *****************************************/
+
+/**
+ * @file
+ * Implement hooks for @font-your-face context reaction.
+ */
  
 /**
- * Make module compatible with context 3
- * implement hook_ctools_plugin_api().
+ * Implements hook_ctools_plugin_api().
  */
 function context_fontyourface_ctools_plugin_api($module, $api) {
   if ($module == 'context' && $api == 'plugins') {
@@ -14,8 +15,7 @@ function context_fontyourface_ctools_plugin_api($module, $api) {
 }
 
 /**
- * Make module compatible with context 3
- * Implement hook_context_plugins().
+ * Implements hook_context_plugins().
  */
 function context_fontyourface_context_plugins() {
   $plugins = array();
@@ -31,8 +31,7 @@ function context_fontyourface_context_plugins() {
 }
 
 /**
- * Make module compatible with context 3
- * Implement hook_context_registry().
+ * Implements hook_context_registry().
  */
 function context_fontyourface_context_registry() {
   return array(

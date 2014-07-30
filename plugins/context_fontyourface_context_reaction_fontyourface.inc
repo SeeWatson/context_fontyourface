@@ -1,10 +1,13 @@
 <?php
+
 /**
- * Expose @fontyourface fonts as context reactions.
+ * @file
+ * Expose @font-your-face fonts as context reactions.
  */
+ 
 class context_fontyourface_context_reaction_fontyourface extends context_reaction {
   /**
-   * Allow admins to provide additional body classes.
+   * Builds context reaction form.
    */
   function options_form($context) {
     $values = $this->fetch_from_context($context);
@@ -21,6 +24,9 @@ class context_fontyourface_context_reaction_fontyourface extends context_reactio
   
   /**
    * Public method that is called from hooks or other integration points.
+   *
+   * @return
+   *   Returns true if suppression of font loading was enabled.
    */
   function execute() {
     foreach ($this->get_contexts() as $k => $v) {

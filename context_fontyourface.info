@@ -1,6 +1,6 @@
-name = Context Font Your Face
-description = "Provide context access to the @font-your-face module."
-package = Context
+name = @font-your-face Context Reaction
+description = "Provide context integration for the @font-your-face module."
+package = @font-your-face
 core = "7.x"
 dependencies[] = fontyourface
 dependencies[] = context
