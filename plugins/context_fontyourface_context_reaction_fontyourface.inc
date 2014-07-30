@@ -10,10 +10,10 @@ class context_fontyourface_context_reaction_fontyourface extends context_reactio
     $values = $this->fetch_from_context($context);
     $form = array(
       'fontyourface' => array(
-        '#title' => t('Show Fonts'),
-        '#description' => t('Check this box to show fonts.'),
+        '#title' => t('Do Not Load Fonts'),
+        '#description' => t('By default, the @font-your-face modules loads fonts on every page. Check this box to suppress font loading.'),
         '#type' => 'checkbox',
-        '#default_value' => isset($values['fontyourface']) ? 1 : 0,
+        '#default_value' => isset($values['fontyourface']) ? $values['fontyourface'] : 0,
       ),
     );
     return $form;
@@ -22,12 +22,11 @@ class context_fontyourface_context_reaction_fontyourface extends context_reactio
   /**
    * Public method that is called from hooks or other integration points.
    */
-  function execute($fonts) {
+  function execute() {
     foreach ($this->get_contexts() as $k => $v) {
       if (!empty($v->reactions[$this->plugin]['fontyourface'])) {
-        $fonts = '';
+        return true;
       }
     }
-    return $fonts;
   }
 }
