@@ -4,13 +4,6 @@
  * @file
  * Implement hooks for @font-your-face context reaction.
  */
- 
-/**
- * Implements hook_enable().
- */
-function context_fontyourface_enable() {
-  drupal_flush_all_caches();
-}
 
 /**
  * Implements hook_ctools_plugin_api().

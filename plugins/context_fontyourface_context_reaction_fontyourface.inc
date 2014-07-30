@@ -4,7 +4,7 @@
  * @file
  * Expose @font-your-face fonts as context reactions.
  */
- 
+
 class context_fontyourface_context_reaction_fontyourface extends context_reaction {
   /**
    * Builds context reaction form.
@@ -21,7 +21,7 @@ class context_fontyourface_context_reaction_fontyourface extends context_reactio
     );
     return $form;
   }
-  
+
   /**
    * Public method that is called from hooks or other integration points.
    *
