@@ -31,7 +31,7 @@ class context_fontyourface_context_reaction_fontyourface extends context_reactio
   function execute() {
     foreach ($this->get_contexts() as $k => $v) {
       if (!empty($v->reactions[$this->plugin]['fontyourface'])) {
-        return true;
+        return TRUE;
       }
     }
   }
